@@ -35,7 +35,6 @@ const HeroText = () => {
             >
               <Link
                 to='/register'
-                // href="../../pages/Registeration.tsx"
                 className='text-white 3xl:text-[32px]'
               >
                 Get Started

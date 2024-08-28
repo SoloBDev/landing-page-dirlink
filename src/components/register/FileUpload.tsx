@@ -50,7 +50,6 @@ const FileUpload = ({ handleChanged, name }: Props) =>
       <Box
         p="3"
         border="2px dashed"
-        background="#f5ecec"
         borderColor={highlighted ? "blue.400" : "#3222c6"}
         onDragEnter={handleDragEnter}
         onDragOver={handleDragEnter}

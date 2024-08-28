@@ -37,7 +37,6 @@ function Registration() {
         </Box>
       </GridItem>
       <GridItem
-        bg={"#fff"}
         paddingTop={"12px"}
         zIndex={1}
         colSpan={{
