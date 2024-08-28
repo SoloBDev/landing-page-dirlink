@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { Form, Formik } from "formik";
 
-import FileUpload from "./uploadfile";
+import FileUpload from './FileUpload';
 import { TextInput } from "../Shared";
 
 export interface RegistrationFormData {
@@ -72,12 +72,12 @@ function RegistrationForm({
               Company Name
             </FormLabel>
             <TextInput
-              name="companyName"
+              name='companyName'
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                 handleChange(e);
                 setData({ ...values, companyName: e.target.value });
               }}
-              placeholder="company name"
+              placeholder='company name'
             />
             <FormErrorMessage>{errors.companyName}</FormErrorMessage>
           </FormControl>
@@ -95,34 +95,34 @@ function RegistrationForm({
                 setValues({ ...values, serviceType: e });
                 setData({ ...values, serviceType: e });
               }}
-              aria-labelledby="serviceType"
-              name="serviceType"
+              aria-labelledby='serviceType'
+              name='serviceType'
               fontWeight={"600"}
             >
-              <HStack spacing="30px">
+              <HStack spacing='30px'>
                 <Radio
-                  type="radio"
+                  type='radio'
                   key={"city"}
-                  name="serviceType"
-                  value="city"
+                  name='serviceType'
+                  value='city'
                 >
                   City only
                 </Radio>
 
                 <Radio
                   key={"domestic"}
-                  type="radio"
-                  name="serviceType"
-                  value="domestic"
+                  type='radio'
+                  name='serviceType'
+                  value='domestic'
                 >
                   Domestic
                 </Radio>
 
                 <Radio
                   key={"international"}
-                  type="radio"
-                  name="serviceType"
-                  value="international"
+                  type='radio'
+                  name='serviceType'
+                  value='international'
                 >
                   International
                 </Radio>
@@ -135,7 +135,7 @@ function RegistrationForm({
             isRequired
           >
             <FormLabel
-              as="legend"
+              as='legend'
               marginTop={"20px"}
               padding={"10px"}
               fontSize={"lg"}
@@ -147,19 +147,19 @@ function RegistrationForm({
                 setValues({ ...values, transportType: e });
                 setData({ ...values, transportType: e });
               }}
-              name="transportType"
+              name='transportType'
               padding={"10px"}
               fontWeight={"600"}
             >
-              <HStack spacing="24px">
-                <Radio key="cycle" name="transportType" value="motor">
+              <HStack spacing='24px'>
+                <Radio key='cycle' name='transportType' value='motor'>
                   Motor Cycle
                 </Radio>
 
-                <Radio key="automobile" name="transportType" value="Automobile">
+                <Radio key='automobile' name='transportType' value='Automobile'>
                   Automobile
                 </Radio>
-                <Radio key="cargo" name="transportType" value="Cargo car">
+                <Radio key='cargo' name='transportType' value='Cargo car'>
                   Cargo
                 </Radio>
               </HStack>
@@ -169,50 +169,50 @@ function RegistrationForm({
           <FormControl isInvalid={!!errors.TIN && !!touched.TIN} isRequired>
             <FormLabel marginTop={"15"}>TIN</FormLabel>
             <TextInput
-              name="TIN"
+              name='TIN'
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                 handleChange(e);
                 setData({ ...values, TIN: e.target.value });
               }}
-              placeholder="Enter TIN"
+              placeholder='Enter TIN'
             />
           </FormControl>
 
           <Grid
-            templateColumns="repeat(2, 2fr)"
-            gridTemplateRows="repeat(2,2fr)"
+            templateColumns='repeat(2, 2fr)'
+            gridTemplateRows='repeat(2,2fr)'
             gap={8}
           >
-            <GridItem w="100%" h="10">
+            <GridItem w='100%' h='10'>
               <FormControl
                 isInvalid={!!errors.companyAddress && !!touched.companyAddress}
                 isRequired
               >
                 <FormLabel marginTop={"15"}>Company Address</FormLabel>
                 <TextInput
-                  name="companyAddress"
+                  name='companyAddress'
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                     handleChange(e);
                     setData({ ...values, companyAddress: e.target.value });
                   }}
-                  placeholder="company address"
+                  placeholder='company address'
                 />
               </FormControl>
             </GridItem>
 
-            <GridItem w="100%" h="10">
+            <GridItem w='100%' h='10'>
               <FormControl
                 isInvalid={!!errors.companyPhone && !!touched.companyPhone}
                 isRequired
               >
                 <FormLabel marginTop={"15"}>Company phone no</FormLabel>
                 <TextInput
-                  name="companyPhone"
+                  name='companyPhone'
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                     handleChange(e);
                     setData({ ...values, contactPersonPhone: e.target.value });
                   }}
-                  placeholder="company phone no"
+                  placeholder='company phone no'
                 />
               </FormControl>
             </GridItem>
@@ -223,11 +223,11 @@ function RegistrationForm({
           </Text>
 
           <Grid
-            templateColumns="repeat(2, 2fr)"
-            gridTemplateRows="repeat(2,2fr)"
+            templateColumns='repeat(2, 2fr)'
+            gridTemplateRows='repeat(2,2fr)'
             gap={8}
           >
-            <GridItem w="100%" h="10">
+            <GridItem w='100%' h='10'>
               <FormControl
                 isInvalid={
                   !!errors.contactPersonName && !!touched.contactPersonName
@@ -236,17 +236,17 @@ function RegistrationForm({
               >
                 <FormLabel marginTop={"15"}>Full Name</FormLabel>
                 <TextInput
-                  name="contactPersonName"
+                  name='contactPersonName'
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                     handleChange(e);
                     setData({ ...values, contactPersonName: e.target.value });
                   }}
-                  placeholder="Full Name"
+                  placeholder='Full Name'
                 />
               </FormControl>
             </GridItem>
 
-            <GridItem w="100%" h="10">
+            <GridItem w='100%' h='10'>
               <FormControl
                 isInvalid={
                   !!errors.contactPersonPhone && !!touched.contactPersonPhone
@@ -255,23 +255,23 @@ function RegistrationForm({
               >
                 <FormLabel marginTop={"15"}>Phone no</FormLabel>
                 <TextInput
-                  name="contactPersonPhone"
+                  name='contactPersonPhone'
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                     handleChange(e);
                     setData({ ...values, contactPersonPhone: e.target.value });
                   }}
-                  placeholder="Enter Phone number"
+                  placeholder='Enter Phone number'
                 />
               </FormControl>
             </GridItem>
           </Grid>
 
           <Grid
-            templateColumns="repeat(2, 2fr)"
-            gridTemplateRows="repeat(2,2fr)"
+            templateColumns='repeat(2, 2fr)'
+            gridTemplateRows='repeat(2,2fr)'
             gap={8}
           >
-            <GridItem w="100%" h="10">
+            <GridItem w='100%' h='10'>
               <FormControl
                 isInvalid={
                   !!errors.contactPersonEmail && !!touched.contactPersonEmail
@@ -280,17 +280,17 @@ function RegistrationForm({
               >
                 <FormLabel marginTop={"15"}>Email</FormLabel>
                 <TextInput
-                  name="contactPersonEmail"
+                  name='contactPersonEmail'
                   onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                     handleChange(e);
                     setData({ ...values, contactPersonEmail: e.target.value });
                   }}
-                  placeholder="Email"
+                  placeholder='Email'
                 />
               </FormControl>
             </GridItem>
 
-            <GridItem w="100%" h="10">
+            <GridItem w='100%' h='10'>
               <FormControl
                 isInvalid={
                   !!errors.contactPersonGender && !!touched.contactPersonGender
@@ -303,17 +303,17 @@ function RegistrationForm({
                     setValues({ ...values, contactPersonGender: e });
                     setData({ ...values, contactPersonGender: e });
                   }}
-                  name="contactPersonGender"
+                  name='contactPersonGender'
                   fontWeight={"600"}
                 >
-                  <HStack spacing="30px">
-                    <Radio key={"male"} name="contactPersonGender" value="male">
+                  <HStack spacing='30px'>
+                    <Radio key={"male"} name='contactPersonGender' value='male'>
                       Male
                     </Radio>
                     <Radio
                       key={"female"}
-                      name="contactPersonGender"
-                      value="female"
+                      name='contactPersonGender'
+                      value='female'
                     >
                       Female
                     </Radio>
@@ -324,7 +324,7 @@ function RegistrationForm({
           </Grid>
 
           <FileUpload
-            name="supportDocument"
+            name='supportDocument'
             handleChanged={(file) => {
               setValues({ ...values, supportDocument: file });
               setData({ ...values, supportDocument: file });
@@ -340,7 +340,7 @@ function RegistrationForm({
             bg={"#3222c6"}
             color={"white"}
             isLoading={isSubmitting}
-            type="submit"
+            type='submit'
             width={"30vh"}
           >
             Submit

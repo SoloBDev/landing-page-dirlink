@@ -8,21 +8,13 @@ interface LogoProps {
 function Logo({ width, boxWidth }: LogoProps) {
   return (
     <Box
-      width={boxWidth || "100%"}
+      width={boxWidth || "70%"}
       display={"flex"}
-      justifyContent={{
-        xl: "center",
-        lg: "center",
-        md: "center",
-        base: "center",
-      }}
-      alignItems={{
-        xl: "flex-start",
-        lg: "flex-start",
-        md: "center",
-        base: "center",
-      }}
+      justifyContent={"center"}
+      alignItems={"center"}
       height={"100%"}
+      pb={20}
+      ml={8}
     >
       <Box
         width={

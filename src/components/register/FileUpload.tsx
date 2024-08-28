@@ -1,13 +1,10 @@
 import { Box } from "@chakra-ui/react";
 import React, {
-  // Dispatch, SetStateAction,
   useState,
 } from "react";
 import { FaFileUpload } from "react-icons/fa";
 
-// interface FileUploadProps {
-//   uploadedSetter: Dispatch<SetStateAction<File | null>>;
-// }
+
 
 interface Props {
   handleChanged: (file: File) => void;
@@ -15,7 +12,6 @@ interface Props {
 }
 
 const FileUpload = ({ handleChanged, name }: Props) =>
-  // { uploadedSetter }: FileUploadProps
   {
     const [highlighted, setHighlighted] = useState(false);
     const [uploadedFile, setUploadedFile] = useState<File | null>(null);
@@ -61,8 +57,8 @@ const FileUpload = ({ handleChanged, name }: Props) =>
         onDragLeave={handleDragLeave}
         onDrop={handleDrop}
         cursor="pointer"
-        width="500px"
-        height="150px"
+        width={{base: "320px" ,lg: "500px", '2xl': "600px"}}
+        height={{ base: "80px", md: '108px', lg: '120px', '2xl': "150px"}}
         display="flex"
         flexDirection="column"
         alignItems="center"

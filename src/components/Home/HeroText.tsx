@@ -7,11 +7,10 @@ import {
   useColorMode,
   Button,
 } from "@chakra-ui/react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const HeroText = () => {
   const { colorMode } = useColorMode();
-  const navigate = useNavigate();
   return (
     <>
       <SimpleGrid columns={{ base: 1, lg: 2 }} marginTop={12}>
@@ -35,10 +34,8 @@ const HeroText = () => {
               } text-[32px] base:w-[60%] base:my-6 xss:my-10 base:!h-12 2xl:h-16  sm:w-[40%] w-72  lg:ml-6`}
             >
               <Link
-                // onClick={() =>
-                //   navigate("/register")
-                // }
-                to="/register"
+                to='/register'
+                // href="../../pages/Registeration.tsx"
                 className='text-white 3xl:text-[32px]'
               >
                 Get Started

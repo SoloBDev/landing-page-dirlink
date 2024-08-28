@@ -1,5 +1,5 @@
 import "./App.css";
-import LandingPage from "./pages/LandingPage";
+import MainRoutes from "./routes/MainRoutes";
 
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <>
     
 
-      <LandingPage  />
+      <MainRoutes  />
     
     </>
   );
