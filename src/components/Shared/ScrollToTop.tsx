@@ -34,7 +34,7 @@ export const ScrollToTop = () => {
         _hover={{ bg: "#c70d80" }}
         className="!fixed bottom-5 right-5 z-[999] text-white"
       >
-        <ArrowUpToLine className="base:h-6   2xl:h-10 base:w-6 2xl:w-10" />
+        <ArrowUpToLine className="base:h-6 2xl:h-10 base:w-6 2xl:w-10" />
       </Button>
       )}
     </>
